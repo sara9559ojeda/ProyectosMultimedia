@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader, SRGBColorSpace } from "three";
 
-export default function CuboInteractivo() {
+
+export default function CuboInteractivo({ position = [0, 0, 0] }) {
   const cubeRef = useRef();
   const [color, setColor] = useState("white");
 
@@ -33,11 +34,11 @@ export default function CuboInteractivo() {
   return (
     <mesh
       ref={cubeRef}
-      position={[3, 2, 2]}
+      position={position}
       onClick={handleCubeClick}
       name="cubo"
       castShadow
-      receiveShadow
+      receiveShadow 
     >
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial

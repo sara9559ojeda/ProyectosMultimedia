@@ -24,7 +24,11 @@ function Ejercicio1() {
 
         {/* 🔹 Modelos 3D en la escena */}
         <ModeloPractica />
-        <CuboInteractivo />
+
+        {/* 🔹 Tres cubos interactivos en diferentes posiciones */}
+        <CuboInteractivo position={[0, 0, 0]} />
+        <CuboInteractivo position={[-3, 1, -2]} />
+        <CuboInteractivo position={[-3, 0, 0]} />
         {/* <ModeloInicio /> */}
 
         {/* 🔹 Controles de cámara interactivos */}
